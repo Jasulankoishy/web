@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the eight HTML pages, links, photos and practice forms work.">
+  <title>Colophon — SF Class Project</title>
+</head>
+<body>
+  <header>
+    <p><a href="index.html">SF Shaurma Food</a></p>
+    <!-- These links use file names so we can open the other pages from the same folder. -->
+    <nav aria-label="Site pages">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="visit.html">Visit</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="about.html">About SF</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="colophon.html" aria-current="page">Colophon</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- The main content is separate from the menu so it is easier to find on each page. -->
+  <main>
+    <h1>How the Site Works</h1>
+    <section aria-labelledby="structure">
+      <h2 id="structure">Eight HTML pages</h2>
+      <p>This project has eight HTML pages. The same menu is at the top of every page, so you can move between them. Each page has its own title and text. <strong>The site uses only HTML.</strong></p>
+      <p>The browser reads the HTML tags and shows the page. Headings divide the text into parts. Tables put information in rows and columns. To start, open <code>index.html</code>.</p>
+      <figure>
+        <pre><code>&lt;main&gt;
+  &lt;section aria-labelledby="menu-title"&gt;
+    &lt;h2 id="menu-title"&gt;Menu&lt;/h2&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+        <figcaption>This example shows a main area with a section and a heading.</figcaption>
+      </figure>
+      <p>Press <kbd>Tab</kbd> to move between links and fields. If you leave a required field empty, you may see <samp>Please fill out this field.</samp> The message depends on the language of your browser.</p>
+    </section>
+    <section aria-labelledby="forms">
+      <h2 id="forms">How the forms work</h2>
+      <p>The three forms use GET and open the same page again. Personal fields have no name attribute, so those values stay out of the page address. Only the order type goes into the address. <em>Nothing is booked or sent to SF.</em></p>
+      <!-- This div keeps two short links together. They are not a separate topic, so a section is not needed. -->
+      <div><a href="index.html">Home</a> · <a href="faq.html">FAQ</a></div>
+      <!-- This span marks the version inside a sentence. It does not need a heading or a separate section. -->
+      <p>Version: <span>HTML</span>. The photos are in the images folder, so they open without the internet. The captions describe the photos taken by our team.</p>
+      <hr>
+      <p>HTML entities let us show symbols such as &amp; and &copy;.</p>
+    </section>
+  </main>
+  <footer>
+    <address>
+      Official &laquo;SF&raquo; website: <a href="https://shaurma-food.kz/" target="_blank" rel="noopener noreferrer">shaurma-food.kz</a>.<br>
+      SF phone: <a href="tel:+77777888888">+7&nbsp;(777)&nbsp;788-88-88</a>.
+    </address>
+    <p><small>&copy; 2026. Class project; not the official SF website.</small></p>
+  </footer>
+</body>
+</html>

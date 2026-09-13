@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practice feedback form about an SF visit. Your message is not sent.">
+  <title>Feedback — SF Class Project</title>
+</head>
+<body>
+  <header>
+    <p><a href="index.html">SF Shaurma Food</a></p>
+    <!-- These links use file names so we can open the other pages from the same folder. -->
+    <nav aria-label="Site pages">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="visit.html">Visit</a></li>
+        <li><a href="feedback.html" aria-current="page">Feedback</a></li>
+        <li><a href="about.html">About SF</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="colophon.html">Colophon</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- The main content is separate from the menu so it is easier to find on each page. -->
+  <main>
+    <h1>Your Feedback</h1>
+    <section aria-labelledby="feedback-guide">
+      <h2 id="feedback-guide">Tell us about your visit</h2>
+      <p>A helpful review says when you visited and what you ordered. Add the city and say if you ate at SF, picked up your food or used delivery. Write what you liked and what could be better.</p>
+      <p>If you have a problem with a real order, contact SF. This page is for class practice. Your review will not appear online, and SF will not receive it.</p>
+      <ol start="1">
+        <li>Write when you visited.</li>
+        <li>Tell us about the food or service.</li>
+        <li>Read your message before pressing the button.</li>
+      </ol>
+      <p>The browser checks that the required fields are filled in and that the email has the right format. Reset clears what you entered. Your details and message are not saved. To discuss feedback by email, <a href="mailto:?subject=Discussing%20SF%20feedback">open an email</a> and choose who to send it to.</p>
+    </section>
+    <section aria-labelledby="feedback-form-heading">
+      <h2 id="feedback-form-heading">Feedback form</h2>
+      <form method="get" action="feedback.html#form-result">
+        <!-- This form has no server. Personal fields have no name attribute so their values stay out of the page address. Only the order type goes into the address. -->
+        <fieldset>
+          <legend>Visit details</legend>
+          <p><label for="feedback-name">Name</label><br><input type="text" id="feedback-name" autocomplete="name" required placeholder="Your name"></p>
+          <p><label for="feedback-email">Email</label><br><input type="email" id="feedback-email" autocomplete="email" required placeholder="name@example.org"></p>
+          <p><label for="feedback-tel">Phone</label><br><input type="tel" id="feedback-tel" autocomplete="tel" required placeholder="+7 …"></p>
+          <p><label for="feedback-number">Number of guests</label><br><input type="number" id="feedback-number" min="1" max="30" step="1" required placeholder="1"></p>
+          <p><label for="feedback-date">Visit date</label><br><input type="date" id="feedback-date" required></p>
+          <p><label for="feedback-city">City</label><br><select id="feedback-city" required>
+            <option value="" selected disabled>Choose a city</option>
+            <option value="astana">Astana</option><option value="kosshy">Kosshy</option>
+            <option value="kokshetau">Kokshetau</option><option value="karaganda">Karaganda</option>
+          </select></p>
+        </fieldset>
+        <fieldset>
+          <legend>Order type</legend>
+          <p><input type="radio" id="feedback-dine" name="format" value="dine-in" required><label for="feedback-dine">Dine-in</label></p>
+          <p><input type="radio" id="feedback-pickup" name="format" value="pickup"><label for="feedback-pickup">Pickup</label></p>
+          <p><input type="radio" id="feedback-delivery" name="format" value="delivery"><label for="feedback-delivery">Delivery</label></p>
+        </fieldset>
+        <fieldset>
+          <legend>Message</legend>
+          <p><label for="feedback-message">Your feedback</label><br><textarea id="feedback-message" rows="4" cols="40" required placeholder="Write about your visit or ask a question"></textarea></p>
+          <p><input type="checkbox" id="feedback-check" required><label for="feedback-check">I know this form does not send anything</label></p>
+        </fieldset>
+        <p><button type="submit">Check feedback</button> <button type="reset">Reset</button></p>
+      </form>
+    </section>
+    <p id="form-result"><strong>Practice form:</strong> your review is not posted or sent to SF. The form just lets you practise filling in fields.</p>
+  </main>
+  <footer>
+    <address>
+      Official &laquo;SF&raquo; website: <a href="https://shaurma-food.kz/" target="_blank" rel="noopener noreferrer">shaurma-food.kz</a>.<br>
+      SF phone: <a href="tel:+77777888888">+7&nbsp;(777)&nbsp;788-88-88</a>.
+    </address>
+    <p><small>&copy; 2026. Class project; not the official SF website.</small></p>
+  </footer>
+</body>
+</html>
